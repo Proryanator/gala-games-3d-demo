@@ -10,8 +10,6 @@ public class CollisionDirectionDetector : MonoBehaviour
 		DetectDirection(collision.transform);
 	}
 
-	// intended to be called by objects colliding with the object
-	// can make it where this object detects collisions as well
 	public void DetectDirection(Transform incomingTransform)
 	{
 		Vector3 directionTowardsObject = (transform.position - incomingTransform.position).normalized;
