@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ProjectileSpawner : MonoBehaviour
 {
-    private readonly string PLAYER_TAG = "Player";
 	private Transform playerTransform;
 
 	[SerializeField]
@@ -15,7 +14,7 @@ public class ProjectileSpawner : MonoBehaviour
 
 	private void Awake()
 	{
-		playerTransform = GameObject.FindGameObjectWithTag(PLAYER_TAG).transform;
+		playerTransform = GameObject.FindGameObjectWithTag(Tags.PLAYER_TAG).transform;
 		if (playerTransform == null)
 		{
 			Debug.LogError("Not able to find player in the scene, projectiles will not target correctly");
